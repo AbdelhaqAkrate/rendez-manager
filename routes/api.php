@@ -21,3 +21,14 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::name('api.')
+    ->group(
+        function () {
+            require __DIR__ . '/api/auth/api.php';
+            Route::group([
+                'middleware' => [AuthService::AUTH_MIDDLEWARE_NAME],
+            ], function () {
+
+            });
+        }
+    );
