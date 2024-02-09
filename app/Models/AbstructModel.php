@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Carbon\Carbon;
 
-abstract class AbstractModel extends Model
+abstract class AbstructModel extends Model
 {
   //  use SoftDeletes;
     
