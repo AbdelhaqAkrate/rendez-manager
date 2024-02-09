@@ -1,5 +1,8 @@
 <?php
 
+use App\Models\User\User;
+use App\Services\Auth\API\AuthService;
+
 return [
 
     /*
@@ -40,6 +43,10 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        AuthService::GUARD_NAME => [
+            'driver'   => 'jwt',
+            'provider' => 'users',
+        ],
     ],
 
     /*
@@ -62,7 +69,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => App\Models\User::class,
+            'model' => User::class,
         ],
 
         // 'users' => [

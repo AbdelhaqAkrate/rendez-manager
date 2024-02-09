@@ -1,5 +1,7 @@
 <?php
 
+use App\Log\LogJsonHandler;
+use App\Log\LogLineHandler;
 use Monolog\Handler\NullHandler;
 use Monolog\Handler\StreamHandler;
 use Monolog\Handler\SyslogUdpHandler;
@@ -125,6 +127,14 @@ return [
 
         'emergency' => [
             'path' => storage_path('logs/laravel.log'),
+        ],
+        'app_logger' => [
+            'driver' => 'daily',
+            'tap' => true === env('LOG_FORMAT_JSON', true) ?
+                [LogJsonHandler::class] : [LogLineHandler::class],
+            'path' => storage_path('logs/platform.log'),
+            'level' => env('APP_LOG_LEVEL', 'debug'),
+            'days' => 2,
         ],
     ],
 
