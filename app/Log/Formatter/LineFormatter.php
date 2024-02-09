@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Core\Log\Formatter;
+namespace App\Log\Formatter;
 
 use DateTimeZone;
 use Monolog\Formatter\LineFormatter as BaseLineFormatter;

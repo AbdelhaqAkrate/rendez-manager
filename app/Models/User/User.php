@@ -3,7 +3,7 @@
 namespace App\Models\User;
 
 use Carbon\Carbon;
-use App\Models\AbstractModel;
+use App\Models\AbstructModel;
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Facades\Mail;
@@ -16,7 +16,7 @@ use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 use Spatie\Permission\Traits\HasRoles;
 
-class User extends AbstractModel implements AuthenticatableContract, AuthorizableContract, JWTSubject, CanResetPassword
+class User extends AbstructModel implements AuthenticatableContract, AuthorizableContract, JWTSubject, CanResetPassword
 {
     use Authenticatable, Authorizable, Notifiable;
     use HasRoles;

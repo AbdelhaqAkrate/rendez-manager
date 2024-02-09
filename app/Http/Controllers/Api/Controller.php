@@ -1,8 +1,7 @@
 <?php
 
-namespace App\Http\Controllers\API;
+namespace App\Http\Controllers\Api;
 
-use App\Models\Model;
 use App\Log\AppLogger;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
@@ -16,6 +15,7 @@ use League\Fractal\TransformerAbstract;
 use League\Fractal\Manager as FractalManager;
 use Illuminate\Pagination\LengthAwarePaginator;
 use App\Exceptions\Auth\UserNotLoggedInException;
+use App\Models\Model;
 use League\Fractal\Pagination\IlluminatePaginatorAdapter;
 use App\Services\Auth\AuthService as UserAuthService;
 use League\Fractal\Resource\Collection as FractalCollection;

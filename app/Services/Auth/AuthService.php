@@ -28,7 +28,7 @@ class AuthService extends Service
         if (!$user instanceof User) {
             return null;
         }
-
+        
         if (!$this->passwordHashManager->check($password, $user->getPassword())) {
             return null;
         }

@@ -4,10 +4,10 @@ namespace App\Http\Controllers\API\Auth;
 
 use Throwable;
 use Carbon\Carbon;
-use App\Core\Log\LogParametersList;
+use App\Log\LogParametersList;
 use App\Http\Controllers\API\Controller;
-use App\Core\Services\Feature\FeatureList;
-use App\Core\Services\User\PasswordResetService;
+use App\Services\Feature\FeatureList;
+use App\Services\User\PasswordResetService;
 use Illuminate\Support\Facades\Hash;
 
 class PasswordResetCheckTokenController extends Controller

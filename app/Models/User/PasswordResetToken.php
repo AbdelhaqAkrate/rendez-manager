@@ -2,8 +2,8 @@
 
 namespace App\Models\User;
 
-use Carbon\Carbon;
 use App\Models\Model;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class PasswordResetToken extends Model

@@ -4,12 +4,12 @@ namespace App\Http\Controllers\API\Auth;
 
 use Throwable;
 use Illuminate\Http\Response;
-use App\Core\Models\User\User;
-use App\Core\Log\LogParametersList;
-use App\Core\Services\User\UserService;
+use App\Models\User\User;
+use App\Log\LogParametersList;
+use App\Services\User\UserService;
 use App\Http\Controllers\API\Controller;
 use Illuminate\Support\Facades\Password;
-use App\Core\Services\Feature\FeatureList;
+use App\Services\Feature\FeatureList;
 use Illuminate\Support\Facades\RateLimiter;
 use App\Http\Requests\Auth\ResetPasswordRequest;
 

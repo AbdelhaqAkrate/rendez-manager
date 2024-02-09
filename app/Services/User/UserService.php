@@ -19,7 +19,7 @@ class UserService extends Service
     public function findByEmail(string $email): ?User
     {
         $user = $this->userManager->findByEmail($email);
-
+        
         $this->appLogger->info('finding user by email', [
             LogParametersList::FEATURE   => FeatureList::ACCOUNT_USERS,
             LogParametersList::USER_ID => $user?->getId(),

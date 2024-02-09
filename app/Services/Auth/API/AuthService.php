@@ -4,12 +4,12 @@ namespace App\Services\Auth\API;
 
 use Carbon\Carbon;
 use App\Models\User\User;
-use App\Core\Services\Service;
+use App\Services\Service;
 use Illuminate\Auth\AuthManager;
 use PHPOpenSourceSaver\JWTAuth\Token;
 use Illuminate\Foundation\Application;
 use PHPOpenSourceSaver\JWTAuth\JWTGuard;
-use App\Core\Services\Auth\API\EloquentUserProvider;
+use App\Services\Auth\API\EloquentUserProvider;
 
 class AuthService extends Service
 {

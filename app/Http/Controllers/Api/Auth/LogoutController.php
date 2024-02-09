@@ -3,9 +3,9 @@
 namespace App\Http\Controllers\API\Auth;
 
 use Throwable;
-use App\Core\Log\LogParametersList;
+use App\Log\LogParametersList;
 use App\Http\Controllers\API\Controller;
-use App\Core\Services\Feature\FeatureList;
+use App\Services\Feature\FeatureList;
 
 class LogoutController extends Controller
 {

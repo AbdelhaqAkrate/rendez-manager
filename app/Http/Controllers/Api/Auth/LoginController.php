@@ -20,7 +20,7 @@ class LoginController extends Controller
         if ($rateLimitResponse) {
             return $rateLimitResponse;
         }
-
+        
         try {
             $validatedAttributes = $request->validated();
             $password = Arr::get($validatedAttributes, 'password');

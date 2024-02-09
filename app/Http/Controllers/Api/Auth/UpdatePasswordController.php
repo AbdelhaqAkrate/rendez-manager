@@ -4,13 +4,13 @@ namespace App\Http\Controllers\API\Auth;
 
 use Throwable;
 use Carbon\Carbon;
-use App\Core\Models\User\User;
-use App\Core\Log\LogParametersList;
+use App\Models\User\User;
+use App\Log\LogParametersList;
 use Illuminate\Support\Facades\Hash;
-use App\Core\Services\User\UserService;
+use App\Services\User\UserService;
 use App\Http\Controllers\API\Controller;
-use App\Core\Services\Feature\FeatureList;
-use App\Core\Services\User\PasswordResetService;
+use App\Services\Feature\FeatureList;
+use App\Services\User\PasswordResetService;
 use App\Http\Requests\Auth\UpdatePasswordRequest;
 
 class UpdatePasswordController extends Controller
