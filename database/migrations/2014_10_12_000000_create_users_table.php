@@ -22,7 +22,6 @@ return new class extends Migration
             $table->string('gender');
             $table->string('active');
             $table->timestamp('email_verified_at')->nullable();
-            $table->string('remember_token')->nullable();
             $table->string('password');
             $table->timestamp('last_connection')->nullable();
             $table->date('start_date')->nullable();
